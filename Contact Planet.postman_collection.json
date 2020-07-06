@@ -1,0 +1,1280 @@
+{
+	"info": {
+		"_postman_id": "82debc7d-fd82-4049-b37c-13dae001ee43",
+		"name": "Contact Planet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "contact create",
+					"item": [
+						{
+							"name": "Create Contact",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e45dc2c7-03ab-4d4c-9e5c-18c9d62ae85f",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{atrium2authkey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"firstName\" : \"vidya\",\r\n\"lastName\" : \"p1\",\r\n\"phone\" : \"2323232323\",\r\n\"email\" : \"vidya@atrium-tech.com\",\r\n\"createdOn\": \"2020-01-13T3:49:22.210Z\",\r\n  \"modifiedOn\": \"2020-01-13T3:49:22.210Z\",\r\n\"addresses\" : [ \r\n        {\r\n            \"line1\" : \"60\",\r\n            \"line2\" : \"öäüÖÄÜß \",\r\n            \"locality\" : \"pune\",\r\n            \"townCity\" : \"pune\",\r\n            \"country\" : \"AT\",\r\n            \"postalCode\" : \"1100\",\r\n            \"latitude\" : 48.1330897,\r\n            \"longitude\" : 16.3043468\r\n        }\r\n    ]\r\n\r\n}"
+								},
+								"url": {
+									"raw": "{{url1}}/contact",
+									"host": [
+										"{{url1}}"
+									],
+									"path": [
+										"contact"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Contact Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0ab03d90-0733-4921-8bcc-cda84ec16736",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{newkey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"firstName\" : \"bhushan1\",\r\n\"lastName\" : \"kulkarni1\",\r\n\"phone\" : \"78945612341\",\r\n\"email\" : \"bhushan@atrium-tech.com\",\r\n\"createdOn\": \"2019-12-09T3:49:22.210Z\",\r\n  \"modifiedOn\": \"2019-12-09T3:49:22.210Z\",\r\n\"addresses\" : [ \r\n        {\r\n            \"line1\" : \"60\",\r\n            \"line2\" : \"model coleny\",\r\n            \"locality\" : \"pune\",\r\n            \"townCity\" : \"pune\",\r\n            \"country\" : \"AT\",\r\n            \"postalCode\" : \"1100\",\r\n            \"latitude\" : 48.1330897,\r\n            \"longitude\" : 16.3043468\r\n        }\r\n    ]\r\n\r\n}"
+								},
+								"url": {
+									"raw": "{{url1}}/contact",
+									"host": [
+										"{{url1}}"
+									],
+									"path": [
+										"contact"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "company create",
+					"item": [
+						{
+							"name": "Create Company",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "785f07b8-af02-4f29-ba3e-ced970289375",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"foreignKey\": \"radhika_1\",\r\n  \"name\": \"radhika_1\",\r\n  \"createdOn\": \"2020-01-02T05:43:17.821Z\",\r\n  \"modifiedOn\": \"2020-01-02T05:43:17.821Z\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/company",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"company"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "corporation create",
+					"item": [
+						{
+							"name": "Create Corporation",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5041fd31-e818-4e1c-92dc-74cc3ee7c38a",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"foreignKey\": \"pradeepcorpkey\",\r\n  \"name\": \"pradeepcorp\",\r\n  \"companies\": [\r\n    \"comp3\"\r\n  ],\r\n  \"createdOn\": \"2020-01-05T08:04:37.625Z\",\r\n  \"modifiedOn\": \"2020-01-05T08:04:37.625Z\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/corporation",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"corporation"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Create client",
+					"item": [
+						{
+							"name": "create client",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "802ab1d3-0b1f-4471-bc59-f4de5429650d",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"company_id\": 8,\r\n  \"active\": true,\r\n  \"role\": \"User\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/client",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "contact update",
+					"item": [
+						{
+							"name": "update full contact",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "84818c9b-5c44-4025-8a72-235dbaaec1d3",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{atrium1authkey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n      \"firstName\": \"vijay\",\r\n    \"lastName\": \"shirore\",\r\n    \"phone\": \"2342342341\",\r\n    \"email\": \"vidya@atrium-tech.com\",\r\n    \"createdOn\": \"2020-01-09T07:37:01.01Z\",\r\n    \"modifiedOn\": \"2020-01-13T10:00:16.709Z\",\r\n    \"addresses\": [\r\n        {\r\n            \"id\": 367,\r\n            \"line1\": \"72\",\r\n            \"line2\": \"shivajinagar\",\r\n            \"line3\": \"s road\",\r\n            \"line4\": \"\",\r\n            \"locality\": \"pune\",\r\n            \"townCity\": \"pune\",\r\n            \"postalCode\": \"1230\",\r\n            \"county\": \"\",\r\n            \"country\": \"AT\",\r\n            \"latitude\": 48.1330897,\r\n            \"longitude\": 16.3043468\r\n        }\r\n    ]\r\n\r\n}"
+								},
+								"url": {
+									"raw": "https://contactplanet.onmapos.com/contact/20166",
+									"protocol": "https",
+									"host": [
+										"contactplanet",
+										"onmapos",
+										"com"
+									],
+									"path": [
+										"contact",
+										"20166"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merge existing contact",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c509b11-dae3-4f3a-ac57-99552cfe9ff4",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{key14}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstName\": \"rupesh\",\r\n    \"lastName\": \"sathe\",\r\n    \"phone\": \"9850656667\",\r\n    \"email\": \"sanket@atrium-tech.com\",\r\n  \"createdOn\": \"2019-11-19T03:49:22.435Z\",\r\n  \"managerComment\": \"string\",\r\n  \"addresses\": [\r\n    {\r\n      \"line1\": \"70\",\r\n      \"line2\": \"jm road\",\r\n      \"line3\": \"string\",\r\n      \"line4\": \"string\",\r\n      \"locality\": \"solapur\",\r\n      \"townCity\": \"solapur\",\r\n      \"postalCode\": \"1230\",\r\n      \"county\": \"string\",\r\n      \"country\": \"AT\",\r\n      \"latitude\" : 48.1330897,\r\n      \"longitude\" : 16.3043468\r\n    }\r\n  ],\r\n  \"modifiedOn\": \"2019-11-19T03:49:00.796Z\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/contact/102",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"contact",
+										"102"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "company update",
+					"item": [
+						{
+							"name": "update company",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ffc0533a-ae65-4b1d-ad20-f27524cfa877",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"foreignKey\": \"atri1\",\r\n  \"name\": \"myatri\",\r\n  \"modifiedOn\": \"2019-11-04T08:48:21.768Z\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/company/{{id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"company",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "corporation update",
+					"item": [
+						{
+							"name": "update corporation",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "623b3259-488d-497c-ab3b-f61a98df8c80",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"foreignKey\": \"contactcomp\",\r\n  \"name\": \"contactcomp\",\r\n  \"companies\": [\r\n    \"acomp1\",\"acomp2\",\"radhika_1\"\r\n  ],\r\n  \"modifiedOn\": \"2020-01-08T09:02:18.862Z\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/corporation/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"corporation",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get ",
+			"item": [
+				{
+					"name": "Get contact",
+					"item": [
+						{
+							"name": "Get contact with Phone no",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c05fcde4-d892-43ed-b8a8-885f8d93a6c1",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{newkey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://contactplanet.onmapos.com/contact?phone=9850656670",
+									"protocol": "https",
+									"host": [
+										"contactplanet",
+										"onmapos",
+										"com"
+									],
+									"path": [
+										"contact"
+									],
+									"query": [
+										{
+											"key": "phone",
+											"value": "9850656670"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get contact with email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c4ddd7e0-0d89-425f-b556-11e6211b5858",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{key13}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}"
+								},
+								"url": {
+									"raw": "{{url}}/contact?email=vihaan@atrium-tech.com",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"contact"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "vihaan@atrium-tech.com"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get company",
+					"item": [
+						{
+							"name": "Get company with comp name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "12e6cf2f-545f-4559-b26c-783444929a85",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n\n\t\n}"
+								},
+								"url": {
+									"raw": "{{url}}/company?foreignKey=contactcomp2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"company"
+									],
+									"query": [
+										{
+											"key": "foreignKey",
+											"value": "contactcomp2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get company with FK",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "55d743a8-4194-4a2c-91fc-f9fb1b50d906",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n\n\t\n}"
+								},
+								"url": {
+									"raw": "{{url}}/company?foreignKey=acomp2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"company"
+									],
+									"query": [
+										{
+											"key": "foreignKey",
+											"value": "acomp2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get corporation",
+					"item": [
+						{
+							"name": "Get corporation with corporation name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0de2912b-f796-4c69-8ce2-4dffb220b645",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/corporation?name=contactcomp",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"corporation"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "contactcomp"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get corporation with FK",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f28f6034-db5d-47e2-92c5-71b2aa718b20",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/corporation?foreignKey=contactcomp",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"corporation"
+									],
+									"query": [
+										{
+											"key": "foreignKey",
+											"value": "contactcomp"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Auth",
+					"item": [
+						{
+							"name": "get auth",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "{{url}}/auth?key=contactcomp",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"auth"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "contactcomp"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get client",
+					"item": [
+						{
+							"name": "get client",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/client",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"client"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get  by id",
+			"item": [
+				{
+					"name": "contact",
+					"item": [
+						{
+							"name": "Get contact with id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "210fb469-36eb-468d-8414-2675c8e44ad9",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{atrium1authkey}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}"
+								},
+								"url": {
+									"raw": "{{url1}}/contact/25202",
+									"host": [
+										"{{url1}}"
+									],
+									"path": [
+										"contact",
+										"25202"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get contact with id Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4005bf4c-c282-468e-a984-12c40c91de7b",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{newkey2}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}"
+								},
+								"url": {
+									"raw": "{{url1}}/contact/20126",
+									"host": [
+										"{{url1}}"
+									],
+									"path": [
+										"contact",
+										"20126"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "company",
+					"item": [
+						{
+							"name": "Get company with comp id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3563e37c-d20e-467c-bf9b-4fe24bc23aa9",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\n}"
+								},
+								"url": {
+									"raw": "{{url}}/company/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"company",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "corporation",
+					"item": [
+						{
+							"name": "Get corporation with id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "16e541b8-9c34-4991-9251-2b04fd813c21",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\n}"
+								},
+								"url": {
+									"raw": "{{url}}/corporation/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"corporation",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete contact",
+			"item": [
+				{
+					"name": "Delete contact by contact id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e2512159-f3cb-452f-9ad4-88ec32110785",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{newkey}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url1}}/contact/20084",
+							"host": [
+								"{{url1}}"
+							],
+							"path": [
+								"contact",
+								"20084"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete address in contact",
+			"item": [
+				{
+					"name": "Delete address in contact with address id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "042cf7b9-b82b-4621-8d55-cc92e19fa85c",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{key13}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/contact/132/address/210",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contact",
+								"132",
+								"address",
+								"210"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Add address to contact",
+			"item": [
+				{
+					"name": "add address to the exiting contact",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9ed907e-dcbc-4630-87b8-9adfadc69841",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{key14}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"line1\" : \"10\",\r\n            \"line2\" : \"fcroad\",\r\n            \"locality\" : \"pune\",\r\n            \"townCity\" : \"pune\",\r\n            \"country\" : \"AT\",\r\n            \"postalCode\" : \"1100\",\r\n            \"latitude\" : 48.1330897,\r\n            \"longitude\" : 16.3043468\r\n  }"
+						},
+						"url": {
+							"raw": "{{url}}/contact/102/address",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contact",
+								"102",
+								"address"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
